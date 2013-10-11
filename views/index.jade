@@ -3,3 +3,35 @@ extends layout
 block content
   h1= title
   p Welcome to #{subtitle}
+  section#commands-list
+    section
+        h3 API list
+        ul
+            li
+                strong  method [ :url ] ( param1,param2,... )
+                i   { explanation }
+        div(style="margin-top:40px;")
+            div
+                i.icon-user &nbsp;
+                strong.big-text  [ clients ]
+            ul
+                li
+                    strong  GET [ /clients/getall ]
+                    br
+                    i   { returns all clients }
+                li
+                    strong  GET [ /clients/:id ]
+                    br
+                    i   { returns client identified by id number }
+                li
+                    strong  POST [ /clients/new ] (Name,Surname,PhoneNumber,MobileNumber)
+                    br
+                    i   { creates new client }
+                li
+                    strong  PUT [ /clients/:id ] (Name,Surname,PhoneNumber,MobileNumber)
+                    br
+                    i   { updates client identified by id number }
+                li
+                    strong  DELETE [ /clients/:id ]
+                    br
+                    i   { deletes client identified by id number }
