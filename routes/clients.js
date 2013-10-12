@@ -1,7 +1,5 @@
-var sqlite3 = require('sqlite3');
-var db = new sqlite3.Database("./storage/database.db");
 
-module.exports = function(app) {
+module.exports = function(app,db) {
 
     app.get('/clients/getall',function(req,res){
         var result = Array();
