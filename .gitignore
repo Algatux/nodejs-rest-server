@@ -7,11 +7,13 @@ lib-cov
 *.pid
 *.gz
 .DS_Store
+*.db
 
 pids
 logs
 results
 
+storage
 npm-debug.log
 node_modules
 .idea

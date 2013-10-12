@@ -21,7 +21,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-require('./routes')(app);
+// MODULES
+require('./routes/index')(app);
+require('./routes/clients')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('ipRestSrv listening on port ' + app.get('port'));
